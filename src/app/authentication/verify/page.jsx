@@ -45,29 +45,17 @@ export default function PasswordResetPage() {
         <div className="w-full max-w-md">
           {/* Icon */}
           <div className="mb-8">
-            <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto">
-              <svg
-                className="w-8 h-8 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
+            <div className="w-20  py-3 px-3 bg-[#066CCB] rounded-xl flex items-center justify-center ">
+             <img className="text-white" src="/icons/user.png" alt="" />
             </div>
           </div>
 
           {/* Title */}
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          <div className=" mb-8">
+            <h3 className="text-4xl font-bold text-[#141522] mb-2">
               Verify Your Identity
             </h3>
-            <p className="text-gray-600">
+            <p className="text-[#141522] font-semibold max-w-xl">
               Select a way to receive the verification code
             </p>
           </div>
@@ -79,7 +67,7 @@ export default function PasswordResetPage() {
               className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
                 selectedMethod === "email"
                   ? "border-blue-600 bg-blue-50"
-                  : "border-gray-200 hover:border-gray-300"
+                  : ""
               }`}
               onClick={() => setSelectedMethod("email")}
             >
@@ -110,11 +98,11 @@ export default function PasswordResetPage() {
                         d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span className="font-medium text-gray-900">
+                    <span className="font-medium text-[#141522]">
                       Email code to
                     </span>
                   </div>
-                  <p className="text-gray-600 mt-1">nedusoft@gmail.com</p>
+                  <p className="text-[#141522] mt-1">nedusoft@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -155,11 +143,11 @@ export default function PasswordResetPage() {
                         d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                       />
                     </svg>
-                    <span className="font-medium text-gray-900">
+                    <span className="font-medium text-[#141522]">
                       Text code to number in -30
                     </span>
                   </div>
-                  <p className="text-gray-600 mt-1 text-sm">
+                  <p className="text-[#141522] mt-1 text-sm">
                     Our text are free, but some service providers may apply
                     usage charges in certain cases.
                   </p>
@@ -179,7 +167,7 @@ export default function PasswordResetPage() {
           <div className="text-center">
             <a
               href="#"
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="text-[#066CCB] hover:text-blue-700 font-medium"
             >
               Sign In to a different account
             </a>

@@ -1,5 +1,5 @@
 "use client"
-import { RiArrowGoBackFill } from "react-icons/ri";
+import { RiArrowGoBackFill, RiArrowGoForwardLine } from "react-icons/ri";
 import { useState } from "react"
 
 export default function PasswordResetPage() {
@@ -112,12 +112,20 @@ export default function PasswordResetPage() {
           </div>
 
           {/* Back button */}
+          <div className="flex gap-26">
           <a href="/authentication/verify">
           <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
           <RiArrowGoBackFill />
-            back
+            Back
           </button>
           </a>
+          <a href="/authentication/verify">
+          <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
+          <RiArrowGoForwardLine />
+            Go
+          </button>
+          </a>
+          </div>
         </div>
       </div>
     </div>
