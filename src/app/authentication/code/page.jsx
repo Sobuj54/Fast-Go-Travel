@@ -119,7 +119,7 @@ export default function PasswordResetPage() {
             Back
           </button>
           </a>
-          <a href="/authentication/verify">
+          <a href="/authentication/newpass">
           <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
           <RiArrowGoForwardLine />
             Go
