@@ -193,7 +193,7 @@ export default function Header() {
               </Button>
 
               <Button variant="outline" className="ml-2">
-                <Link href="/signIn">Login</Link>
+                <Link href="/authentication/signIn">Login</Link>
               </Button>
             </div>
           </div>

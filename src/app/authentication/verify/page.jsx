@@ -166,7 +166,7 @@ export default function PasswordResetPage() {
           {/* Sign In Link */}
           <div className="text-center">
             <a
-              href="#"
+              href="/authentication/signup"
               className="text-[#066CCB] hover:text-blue-700 font-medium"
             >
               Sign In to a different account
