@@ -66,13 +66,13 @@ export default function SliderCarousel() {
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#055BC9] text-white px-2 py-4 rounded-2xl shadow-md hover:bg-[#B004FE]"
+        className="absolute left-3 lg:left-40 top-1/2 -translate-y-1/2 bg-[#055BC9] text-white px-2 py-4 rounded-2xl shadow-md hover:bg-[#B004FE]"
       >
         <SlArrowLeft />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#055BC9] text-white px-2 py-4 rounded-2xl shadow-md hover:bg-[#B004FE]"
+        className="absolute right-3 lg:right-40 top-1/2 -translate-y-1/2 bg-[#055BC9] text-white px-2 py-4 rounded-2xl shadow-md hover:bg-[#B004FE]"
       >
         <SlArrowRight />
       </button>

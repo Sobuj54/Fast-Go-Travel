@@ -4,7 +4,7 @@ import umrahPackages from "../../data/packages.json";
 // Server component; must be async to safely access params
 export default async function DetailsPage({ params }) {
   // Access id safely
-  const id = await params.id; // ✅ await params.id as required by Next.js
+  const {id} = await params; // ✅ await params.id as required by Next.js
 
   // Find the package by ID
   const pkg = umrahPackages.find((p) => p.id === Number(id));

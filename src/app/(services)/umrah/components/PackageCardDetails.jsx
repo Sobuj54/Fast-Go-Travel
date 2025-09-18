@@ -11,8 +11,9 @@ export default function PackageCardDetails({ data, open = true, onClose = () => 
 
   return (
     <div>
-      <SliderCarousel/>
-      <ItineraryPage/>
+      <SliderCarousel />
+      {/* ✅ Pass data into ItineraryPage */}
+      <ItineraryPage data={data} />
     </div>
   );
 }

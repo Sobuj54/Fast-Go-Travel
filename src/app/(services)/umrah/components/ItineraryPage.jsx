@@ -1,17 +1,9 @@
 "use client";
 
 import * as Tabs from "@radix-ui/react-tabs";
-import {
-  Plane,
-  Landmark,
-  Map,
-  Building,
-  Users,
-  CalendarDays,
-  Clock,
-  Info,
-} from "lucide-react";
+import { Users, CalendarDays, Clock, Info } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 const itinerary = [
   {
@@ -64,7 +56,7 @@ const itinerary = [
   },
 ];
 
-export default function ItineraryPage() {
+export default function ItineraryPage({ data }) {
   const [filter, setFilter] = useState("All");
 
   const filterItinerary = (items) => {
@@ -73,48 +65,50 @@ export default function ItineraryPage() {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-6">
-      {/* Day 1-6  */}
-      <div className="col-span-9 border-2 border-gray-200 rounded-2xl mt-4 mx-10">
+    <div className="lg:grid lg:grid-cols-12 lg:gap-6">
+      {/* Day 1-6 Section */}
+      <div className="lg:col-span-9 border-2 border-gray-200 rounded-2xl mt-4 mx-10">
         <div className="max-w-6xl mx-auto px-4 py-10">
-          {/* Top Summary Section */}
+          {/* Top Summary Section – now dynamic */}
           <div className="bg-blue-50 rounded-2xl p-6 grid md:grid-cols-2 gap-4 text-sm mb-8">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-gray-600" />
-              <span>Suitable for: Family</span>
+              <span>Suitable for: {data?.suitability}</span>
             </div>
             <div className="flex items-center gap-2">
               <CalendarDays className="w-4 h-4 text-gray-600" />
-              <span>Availability: 10 Jun’25 - 05 Jul’25</span>
+              <span>Availability: {data?.availability}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-gray-600" />
-              <span>5 Nights 6 Days</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Info className="w-4 h-4 text-gray-600" />
               <span>
-                The package is non-refundable and non-changeable.
+                {data?.nights} Nights {data?.days} Days
               </span>
             </div>
+            {data?.nonRefundable && (
+              <div className="flex items-center gap-2">
+                <Info className="w-4 h-4 text-gray-600" />
+                <span>The package is non-refundable and non-changeable.</span>
+              </div>
+            )}
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-gray-600" />
-              <span>4 - 28</span>
+              <span>{data?.groupSize}</span>
             </div>
           </div>
 
           {/* Section Title */}
           <span className="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
-            Fulfilling
+            {data?.tag || "Fulfilling"}
           </span>
           <h1 className="text-xl font-bold mb-4">Itinerary Details</h1>
 
           {/* Tabs for Days */}
           <Tabs.Root defaultValue="All">
-            <Tabs.List className="flex space-x-2 overflow-x-auto border-b pb-2">
+            <Tabs.List className="flex space-x-8 border-b">
               <Tabs.Trigger
                 value="All"
-                className="px-4 py-2 text-sm font-medium rounded-lg data-[state=active]:bg-blue-600 data-[state=active]:text-white hover:bg-blue-100 transition"
+                className="pb-2 text-lg font-medium text-gray-600 data-[state=active]:text-blue-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-600"
               >
                 All
               </Tabs.Trigger>
@@ -122,7 +116,7 @@ export default function ItineraryPage() {
                 <Tabs.Trigger
                   key={item.day}
                   value={item.day}
-                  className="px-4 py-2 text-sm font-medium rounded-lg data-[state=active]:bg-blue-600 data-[state=active]:text-white hover:bg-blue-100 transition"
+                  className="pb-2 text-lg font-medium text-gray-600 data-[state=active]:text-blue-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-600"
                 >
                   {item.day}
                 </Tabs.Trigger>
@@ -136,10 +130,10 @@ export default function ItineraryPage() {
                   <button
                     key={f}
                     onClick={() => setFilter(f)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium border ${
+                    className={`px-6 py-2 rounded-md text-sm font-medium ${
                       filter === f
                         ? "bg-blue-600 text-white"
-                        : "bg-blue-50 text-gray-700 hover:bg-blue-100"
+                        : "bg-blue-100 text-gray-700 hover:bg-blue-200"
                     }`}
                   >
                     {f}
@@ -172,7 +166,7 @@ export default function ItineraryPage() {
                     </div>
                   </div>
                   {/* Card content */}
-                  <div className="flex flex-col md:flex-row">
+                  <div className="flex flex-col md:flex-row items-start md:items-center">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -219,7 +213,7 @@ export default function ItineraryPage() {
                         ))}
                       </div>
                     </div>
-                    <div className="flex flex-col md:flex-row">
+                    <div className="flex flex-col md:flex-row items-start md:items-center">
                       <img
                         src={filteredItem.image}
                         alt={filteredItem.title}
@@ -248,17 +242,20 @@ export default function ItineraryPage() {
       </div>
 
       {/* Get started */}
-      <div className="col-span-3 text-center mt-4 mr-10">
+      <div className="lg:col-span-3 text-center mt-4 mr-10">
         <div className="border-2 border-gray-200 rounded-2xl p-6">
           <p className="text-gray-500 text-sm">Starts from</p>
           <p className="text-2xl font-bold my-2">
-            <span className="text-sm font-semibold mr-1">BDT</span> 40,150
+            <span className="text-sm font-semibold mr-1">BDT</span>{" "}
+            {data?.price?.toLocaleString()}
           </p>
           <p className="text-gray-500 text-sm mb-4">per person</p>
 
-          <button className="w-full py-2.5 rounded-lg text-white font-medium bg-gradient-to-r from-[#0A60F9] to-[#B004FE] hover:opacity-90 transition">
+          <Link href={`/umrah/booking/${data?.id}`}>
+          <button className="w-full py-2.5 rounded-lg text-white font-medium bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 transition">
             Get Started
           </button>
+         </Link>
         </div>
       </div>
     </div>
