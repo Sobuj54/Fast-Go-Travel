@@ -25,7 +25,7 @@ export default function SliderCarousel() {
     setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="w-full h-[400px] flex overflow-hidden relative rounded-lg shadow-lg">
+    <div className="w-cover mx-auto h-[400px] flex overflow-hidden relative rounded-lg shadow-lg">
       {images.map((img, i) => {
         const isActive = i === activeIndex;
 

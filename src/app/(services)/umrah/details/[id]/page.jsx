@@ -10,7 +10,7 @@ export default async function DetailsPage({ params }) {
   const pkg = umrahPackages.find((p) => p.id === Number(id));
 
   return (
-    <div className="p-6">
+    <div className=" mx-auto max-w-7xl">
       {pkg ? (
         <PackageCardDetails data={pkg} open={true} />
       ) : (

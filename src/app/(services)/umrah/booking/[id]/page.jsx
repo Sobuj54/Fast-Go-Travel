@@ -36,7 +36,7 @@ export default function BookingPage({ params }) {
   return (
     <div className="bg-gray-50 min-h-screen pb-20">
       {/* Progress Steps */}
-      <div className="w-full border-b bg-white">
+      <div className="w-full border-b bg-white shadow-sm">
         <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between relative">
           {/* decorative dashed line */}
           <div className="absolute top-[32px] left-0 right-0 h-[2px] border-t border-dashed border-gray-300 -z-10"></div>

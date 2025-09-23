@@ -67,7 +67,7 @@ export default function ItineraryPage({ data }) {
   return (
     <div className="lg:grid lg:grid-cols-12 lg:gap-6">
       {/* Day 1-6 Section */}
-      <div className="lg:col-span-9 border-2 border-gray-200 rounded-2xl mt-4 mx-10">
+      <div className="lg:col-span-9 border-2 border-gray-200 rounded-2xl mt-4 lg:mx-10">
         <div className="max-w-6xl mx-auto px-4 py-10">
           {/* Top Summary Section – now dynamic */}
           <div className="bg-blue-50 rounded-2xl p-6 grid md:grid-cols-2 gap-4 text-sm mb-8">
@@ -105,10 +105,10 @@ export default function ItineraryPage({ data }) {
 
           {/* Tabs for Days */}
           <Tabs.Root defaultValue="All">
-            <Tabs.List className="flex space-x-8 border-b">
+            <Tabs.List className="flex md:space-x-8 space-x-4 border-b">
               <Tabs.Trigger
                 value="All"
-                className="pb-2 text-lg font-medium text-gray-600 data-[state=active]:text-blue-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-600"
+                className="pb-2 text-md lg:text-lg font-medium text-gray-600 data-[state=active]:text-blue-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-600"
               >
                 All
               </Tabs.Trigger>
@@ -116,7 +116,7 @@ export default function ItineraryPage({ data }) {
                 <Tabs.Trigger
                   key={item.day}
                   value={item.day}
-                  className="pb-2 text-lg font-medium text-gray-600 data-[state=active]:text-blue-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-600"
+                  className="pb-2 text-xs md:text-lg font-medium text-gray-600 data-[state=active]:text-blue-600 data-[state=active]:border-b-2 data-[state=active]:border-blue-600"
                 >
                   {item.day}
                 </Tabs.Trigger>
@@ -242,7 +242,7 @@ export default function ItineraryPage({ data }) {
       </div>
 
       {/* Get started */}
-      <div className="lg:col-span-3 text-center mt-4 mr-10">
+      <div className="lg:col-span-3 text-center mt-4 lg:mr-10">
         <div className="border-2 border-gray-200 rounded-2xl p-6">
           <p className="text-gray-500 text-sm">Starts from</p>
           <p className="text-2xl font-bold my-2">
