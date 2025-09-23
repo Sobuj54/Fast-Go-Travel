@@ -37,7 +37,7 @@ export default function BookingPage({ params }) {
     <div className="bg-gray-50 min-h-screen pb-20">
       {/* Progress Steps */}
       <div className="w-full border-b bg-white shadow-sm">
-        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between relative">
+        <div className="max-w-5xl mx-auto md:px-6 py-3 flex items-center justify-between relative">
           {/* decorative dashed line */}
           <div className="absolute top-[32px] left-0 right-0 h-[2px] border-t border-dashed border-gray-300 -z-10"></div>
 
@@ -70,7 +70,7 @@ export default function BookingPage({ params }) {
       </div>
 
 
-      <div className="lg:grid lg:grid-cols-12 lg:gap-4 max-w-8xl mx-auto px-6">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-4 max-w-8xl mx-auto md:px-6">
         <div className="lg:col-span-9 mx-auto ">
            {/* Content */}
             <div className="max-w-5xl mx-auto mt-10 px-10">
@@ -78,9 +78,9 @@ export default function BookingPage({ params }) {
         <div className="bg-white border rounded-xl shadow-sm p-6">
           <p className="font-bold pb-2">Umrah Package 5 Nights 6 Days</p>
           {/* Package + Price Row */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Package Info */}
-            <div className="col-span-2 bg-blue-50 p-4 rounded-lg grid grid-cols-2 gap-y-3 text-sm text-gray-700 font-light">
+            <div className="md:col-span-2 bg-blue-50 p-4 rounded-lg grid grid-cols-2 gap-y-3 text-sm text-gray-700 font-light">
               <div className="flex items-center gap-2 ">
                 <FaLocationArrow size={16} className="text-[#989898]" />
                 {pkg.location}
