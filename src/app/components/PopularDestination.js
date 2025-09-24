@@ -66,11 +66,11 @@ export default function PopularDestination() {
           {destinations.map((item) => (
             <CarouselItem
               key={item.title}
-              className="basis-1/1 md:basis-1/2 lg:basis-1/3"
+              className="basis-1/1 md:basis-1/2 lg:basis-1/3 py-5"
             >
               <div>
                 <Card>
-                  <CardContent>
+                  <CardContent className="py-7">
                     <div className="relative w-full h-[289px]">
                       <Image
                         src={item.image}

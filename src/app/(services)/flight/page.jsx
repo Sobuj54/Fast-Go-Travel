@@ -6,7 +6,7 @@ const FlightSearch = () => {
   return (
     <div className="max-w-[1440px] mx-auto">
       <ServiceBanner />
-      <div className="p-4 lg:grid lg:grid-cols-12 gap-4">
+      <div className="p-4 lg:grid lg:grid-cols-12 gap-6">
         {/* Left Side (Filters) */}
         <div className="hidden lg:block col-span-3">
           <LeftSidebarFilters />

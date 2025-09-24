@@ -23,13 +23,14 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/", isAvailable: true },
-    { name: "Packages", href: "/packages", isAvailable: false },
     { name: "Flight", href: "/flight", isAvailable: true },
     { name: "Hotel", href: "/hotel", isAvailable: true },
     { name: "Bus", href: "/bus", isAvailable: true },
     { name: "Visa", href: "/visa", isAvailable: true },
     { name: "Tour", href: "/tour", isAvailable: true },
     { name: "Umrah package", href: "/umrah", isAvailable: true },
+    { name: "Cruise", href: "/cruise", isAvailable: true },
+
   ];
 
   const languages = [

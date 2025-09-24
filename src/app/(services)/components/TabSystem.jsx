@@ -18,6 +18,7 @@ import FlightSearchBar from "./FlightSearchBar";
 import BusSearchBar from "./BusSearchBar";
 import HotelSearchBar from "./HotelSearchBar";
 import VisaType from "../visa/components/VisaType";
+import CruiseSearchBar from "./CruiseSearchBar";
 
 // Map paths to tab indices
 const pathToIndex = {
@@ -190,6 +191,12 @@ export default function TabSystem() {
             <TabPanel>
               <InnerTab tabs={tourInnerTabs}>
                 <HotelSearchBar />
+              </InnerTab>
+            </TabPanel>
+            {/* cruise */}
+            <TabPanel>
+              <InnerTab tabs={innerTabs}>
+                <CruiseSearchBar />
               </InnerTab>
             </TabPanel>
           </TabPanels>

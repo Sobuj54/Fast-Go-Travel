@@ -102,7 +102,7 @@ const itineraryData = [
       "Explore Lucerne — see Lion Monument, Kapellbrücke (Chapel Bridge).\n" +
       "Visit Swiss Chocolate Adventure at Verkehrshaus.\n" +
       "Overnight in Central Switzerland (Breakfast, Lunch, Dinner included).",
-    image: ["/images/titls1.svg", "/images/titls.svg"],
+    image: ["/images/titls1.svg", "/images/titls2.svg"],
   },
   {
     day: "11",
