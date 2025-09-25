@@ -7,11 +7,11 @@ import showToast from "@/utils/showToast";
 
 export default function Footer() {
   const utilityPages = [
-    "Contact us",
-    "404 not found",
-    "Password protected",
-    "Travel Insurance",
-    "Change log",
+    { title: "Contact us", to: "/contact-us" },
+    { title: "404 not found", to: "/NotFound" },
+    { title: "Password protected", to: "/" },
+    { title: "Travel Insurance", to: "/" },
+    { title: "Change log", to: "/" },
   ];
 
   return (
@@ -57,11 +57,10 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               {utilityPages.map((page) => (
                 <li
-                  key={page}
-                  onClick={showToast}
+                  key={page.title}
                   className="text-base cursor-pointer hover:text-white md:text-lg"
                 >
-                  {page}
+                  <Link href={page.to}>{page.title}</Link>
                 </li>
               ))}
             </ul>

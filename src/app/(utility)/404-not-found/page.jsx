@@ -1,8 +1,6 @@
 import Link from "next/link";
-import React from "react";
-import { FaArrowLeft } from "react-icons/fa";
 
-const notfound = () => {
+const NOtFound = () => {
   return (
     <div className="max-w-7xl px-3 mx-auto flex items-center justify-center flex-col-reverse md:flex-row my-8  xl:my-32">
       <div className="space-y-8 text-center md:text-start">
@@ -30,4 +28,4 @@ const notfound = () => {
   );
 };
 
-export default notfound;
+export default NOtFound;
