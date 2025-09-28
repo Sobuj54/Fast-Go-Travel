@@ -15,7 +15,7 @@ export default function InsuranceCard() {
     <div className="grid font-manrope gap-6 md:p-4">
       <div className="flex flex-col items-center justify-center">
         {/* View Plans Button */}
-        <div className="mb-4">
+        <div className="my-4">
           <button
             onClick={() => setShowPlans(!showPlans)} // toggle everything
             className="bg-[linear-gradient(100deg,#0A60F9_-0.05%,#B004FE_93.06%)] 
