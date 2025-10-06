@@ -4,6 +4,26 @@ import SortBar from "../components/SortBar";
 import CruiseCards from "./components/CruiseCards";
 import CruiseFilterSidebar from "./components/CruiseFilterSidebar";
 
+export const metadata = {
+  title: "Fast Go Travel | Cruise Packages",
+  description:
+    "Sail away with Fast Go Travel cruise packages. Explore luxury cruises, family-friendly trips, and affordable cruise deals to top destinations worldwide.",
+  keywords: [
+    "cruise packages",
+    "luxury cruises",
+    "family cruises",
+    "cheap cruise deals",
+    "holiday cruises",
+    "vacation cruises",
+    "Fast Go Travel cruises",
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 const Cruise = () => {
   const cruises = [
     "/images/cruise1.jpg",

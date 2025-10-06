@@ -28,7 +28,16 @@ const manrope = Manrope({
 
 export const metadata = {
   title: "Fast Go Travel",
-  description: "Travel booking app",
+  description:
+    "Fast Go Travel makes travel easy. Book cheap flights, hotels, and holiday packages with instant confirmation. Plan your next trip with us today!",
+  keywords: [
+    "travel booking",
+    "cheap flights",
+    "hotels",
+    "vacation deals",
+    "holiday packages",
+    "Fast Go Travel",
+  ],
 };
 
 export default function RootLayout({ children }) {

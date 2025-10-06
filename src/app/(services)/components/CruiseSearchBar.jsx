@@ -1,11 +1,17 @@
-import { Calendar1, ChevronDown, MapPin, Search, User } from "lucide-react";
+import { useState } from "react";
+import { Calendar1, ChevronDown, MapPin, User } from "lucide-react";
 
 const CruiseSearchBar = () => {
+  const [destination, setDestination] = useState("Dubai");
+  const [departing, setDeparting] = useState("22 May 2025");
+  const [cruiseLine, setCruiseLine] = useState("Cruise Line(any)");
+  const [guests, setGuests] = useState("1 adults, 0 children, 0 youth");
+
   return (
     <div className="py-2 px-5 border-[1px] rounded-lg mt-2">
       {/* Search Form */}
       <div className="grid grid-cols-1 md:grid-cols-8 gap-4 items-center">
-        {/* From Input */}
+        {/* Destination */}
         <div className="md:col-span-2 border-b-2 md:border-b-0 md:border-r-2 px-3">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Destination
@@ -15,14 +21,14 @@ const CruiseSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 text-sm focus:outline-0"
-              value="Dubai"
-              readOnly
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
             />
             <ChevronDown />
           </div>
         </div>
 
-        {/* Check in */}
+        {/* Departing */}
         <div className="md:col-span-2 border-b-2 md:border-b-0 md:border-r-2 px-3">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Departing
@@ -32,14 +38,14 @@ const CruiseSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 text-sm focus:outline-0 "
-              value="22 May 2025"
-              readOnly
+              value={departing}
+              onChange={(e) => setDeparting(e.target.value)}
             />
             <ChevronDown />
           </div>
         </div>
 
-        {/* Check Out */}
+        {/* Cruise Line */}
         <div className="md:col-span-2 border-b-2 md:border-b-0 md:border-r-2 px-3">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Cruise Line
@@ -49,14 +55,14 @@ const CruiseSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 text-sm focus:outline-0 "
-              value="Cruise Line(any)"
-              readOnly
+              value={cruiseLine}
+              onChange={(e) => setCruiseLine(e.target.value)}
             />
             <ChevronDown />
           </div>
         </div>
 
-        {/* Guest Selector */}
+        {/* Guest */}
         <div className="md:col-span-2 px-3">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Guest
@@ -66,8 +72,8 @@ const CruiseSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 focus:outline-0 text-sm"
-              value="1 adults, 0 children, 0 youth"
-              readOnly
+              value={guests}
+              onChange={(e) => setGuests(e.target.value)}
             />
             <ChevronDown />
           </div>

@@ -2,6 +2,29 @@ import ServiceBanner from "../components/ServiceBanner";
 import LeftSidebarFilters from "./components/LeftSideBar";
 import RightFlightResults from "./components/RightFlightSearchResults";
 
+// app/flight-search/page.tsx (if using App Router)
+
+export const metadata = {
+  title: "Fast Go Travel | Search Flights",
+  description:
+    "Find and compare flights with Fast Go Travel. Use filters to refine by price, duration, airlines, and more. Book cheap flights with instant confirmation.",
+  keywords: [
+    "flight search",
+    "book flights",
+    "cheap flights",
+    "airline tickets",
+    "Fast Go Travel",
+    "travel booking",
+  ],
+  metadataBase: new URL("https://fast-go-travel.vercel.app/"),
+  category: "travel",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 const FlightSearch = () => {
   return (
     <div className="max-w-[1440px] mx-auto">

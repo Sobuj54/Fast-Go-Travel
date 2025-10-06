@@ -159,7 +159,7 @@ const Layout = ({ children }) => {
                   1280: { slidesPerView: 3 },
                   1440: { slidesPerView: 4 },
                 }}
-                mousewheel={true}      
+                mousewheel={true}
                 keyboard={true}
                 spaceBetween={10}
                 modules={[Navigation, Mousewheel, Keyboard]}

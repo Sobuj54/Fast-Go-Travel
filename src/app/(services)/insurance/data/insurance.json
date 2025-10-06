@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "tag": "Recommended",
+    "type": "INSURANCE",
+    "title": "৳250k + OPD Travel Insurance",
+    "subtitle": "Use wallet cash to pay now",
+    "originalPrice": 470,
+    "discountedPrice": 333,
+    "btnText": "BUY NOW",
+    "logo": "/icons/go-icon.png",
+    "description": "Lorem ipsum dolor sit amet consectetur.",
+    "tcLink": "#",
+    "benefits": [
+      { "label": "Medical Expenses", "value": "৳250,000" },
+      { "label1": "Trip Cancellation", "value1": "৳500" },
+      { "label2": "Baggage Loss", "value2": "৳500" }
+    ],
+    "moreBenefits": "20 More Benefits"
+  },
+  {
+    "id": 2,
+    "tag": "Popular",
+    "type": "INSURANCE",
+    "title": "৳500k Family Travel Insurance",
+    "subtitle": "Covers family trips worldwide",
+    "originalPrice": 820,
+    "discountedPrice": 650,
+    "btnText": "BUY NOW",
+    "logo": "/icons/go-icon.png",
+    "description": "Best plan for families traveling together.",
+    "tcLink": "#",
+    "benefits": [
+      { "label": "Medical Expenses", "value": "৳500,000" },
+      { "label1": "Trip Cancellation", "value1": "৳1,000" },
+      { "label2": "Baggage Loss", "value2": "৳1,200" }
+    ],
+    "moreBenefits": "15 More Benefits"
+  },
+  {
+    "id": 3,
+    "tag": "Best Value",
+    "type": "INSURANCE",
+    "title": "৳1M Premium Travel Insurance",
+    "subtitle": "Maximum protection for your journey",
+    "originalPrice": 1500,
+    "discountedPrice": 1100,
+    "btnText": "BUY NOW",
+    "logo": "/icons/go-icon.png",
+    "description": "Comprehensive premium insurance plan.",
+    "tcLink": "#",
+    "benefits": [
+      { "label": "Medical Expenses", "value": "৳1,000,000" },
+      { "label1": "Trip Cancellation", "value1": "৳5,000" },
+      { "label2": "Baggage Loss", "value2": "৳3,000" }
+    ],
+    "moreBenefits": "30 More Benefits"
+  },
+  {
+    "id": 4,
+    "tag": "Budget",
+    "type": "INSURANCE",
+    "title": "৳100k Basic Travel Insurance",
+    "subtitle": "Affordable plan for short trips",
+    "originalPrice": 300,
+    "discountedPrice": 220,
+    "btnText": "BUY NOW",
+    "logo": "/icons/go-icon.png",
+    "description": "Simple coverage for budget travelers.",
+    "tcLink": "#",
+    "benefits": [
+      { "label": "Medical Expenses", "value": "৳100,000" },
+      { "label1": "Trip Cancellation", "value1": "৳200" },
+      { "label2": "Baggage Loss", "value2": "৳300" }
+    ],
+    "moreBenefits": "10 More Benefits"
+  },
+  {
+    "id": 5,
+    "tag": "Exclusive",
+    "type": "INSURANCE",
+    "title": "৳2M VIP Travel Insurance",
+    "subtitle": "Luxury coverage for elite travelers",
+    "originalPrice": 2800,
+    "discountedPrice": 2200,
+    "btnText": "BUY NOW",
+    "logo": "/icons/go-icon.png",
+    "description": "Ultimate protection for premium clients.",
+    "tcLink": "#",
+    "benefits": [
+      { "label": "Medical Expenses", "value": "৳2,000,000" },
+      { "label1": "Trip Cancellation", "value1": "৳10,000" },
+      { "label2": "Baggage Loss", "value2": "৳8,000" }
+    ],
+    "moreBenefits": "50 More Benefits"
+  }
+]

@@ -7,6 +7,25 @@ import SpecialRequests from "../components/SpecialRequests";
 import TravelInsurance from "../components/TravelInsurance";
 import { ArrowLeft } from "lucide-react";
 
+export const metadata = {
+  title: "Fast Go Travel | Cruise Booking",
+  description:
+    "Complete your cruise booking with Fast Go Travel. Enter traveler details, add co-travelers, select special requests, and review your booking summary.",
+  keywords: [
+    "cruise booking",
+    "travel insurance",
+    "special requests",
+    "co-travelers",
+    "Fast Go Travel cruise",
+  ],
+  robots: {
+    index: false, // prevent indexing for user-specific/transactional pages
+    follow: true,
+  },
+
+  category: "travel",
+};
+
 const Booking = () => {
   return (
     <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-10 gap-10">

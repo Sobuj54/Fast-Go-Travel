@@ -7,6 +7,27 @@ import MapSection from "../components/MapSection";
 import Reviews from "../components/Reviews";
 import RoomCard from "../components/RoomCard";
 
+export const metadata = {
+  title: "Fast Go Travel | Hotel Details & Booking",
+  description:
+    "Explore detailed hotel information, available rooms, amenities, and reviews with Fast Go Travel. Book your ideal stay with ease and confidence.",
+  keywords: [
+    "hotel details",
+    "hotel booking",
+    "available rooms",
+    "hotel amenities",
+    "hotel reviews",
+    "Fast Go Travel hotels",
+  ],
+
+  robots: {
+    index: false, // transactional pages with booking info usually shouldn’t be indexed
+    follow: true,
+  },
+
+  category: "travel",
+};
+
 const HotelDetails = () => {
   return (
     <>

@@ -29,6 +29,8 @@ export default function Header() {
     { name: "Visa", href: "/visa", isAvailable: true },
     { name: "Tour", href: "/tour", isAvailable: true },
     { name: "Cruise", href: "/cruise", isAvailable: true },
+    { name: "Umrah package", href: "/umrah", isAvailable: true },
+    { name: "Travel Insurance", href: "/insurance", isAvailable: true },
   ];
 
   const languages = [
@@ -110,21 +112,58 @@ export default function Header() {
 
           {/* Desktop menu */}
           <div className="hidden lg:flex md:items-center md:justify-center md:space-x-5 lg:space-x-10">
-            {navLinks.map((link) => {
+            {navLinks.map((link, i) => {
               const isActive = pathname === link.href;
               return (
-                <Link
-                  key={link.href}
-                  href={link.isAvailable ? link.href : "#"}
-                  onClick={() => link.isAvailable || showToast()}
-                  className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
-                    isActive ? "text-blue-500" : "text-black"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                i < 4 && (
+                  <Link
+                    key={link.href}
+                    href={link.isAvailable ? link.href : "#"}
+                    onClick={() => link.isAvailable || showToast()}
+                    className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
+                      isActive ? "text-blue-500" : "text-black"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                )
               );
             })}
+            <NavigationMenu viewport={false} className="w-14">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-base">
+                    More
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[300px] gap-4">
+                      {navLinks.map((link, i) => {
+                        const isActive = pathname === link.href;
+                        return (
+                          i > 3 && (
+                            <li key={link.href}>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  href={link.isAvailable ? link.href : "#"}
+                                  onClick={() =>
+                                    link.isAvailable || showToast()
+                                  }
+                                  className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
+                                    isActive ? "text-blue-500" : "text-black"
+                                  }`}
+                                >
+                                  {link.name}
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          )
+                        );
+                      })}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
 
           {/* Mobile menu */}

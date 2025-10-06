@@ -5,30 +5,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Clock, Globe, Video } from "lucide-react";
 
 export default function MeetingBooking() {
-  const [date, setDate] = useState(new Date(2025, 5, 16));
-
-  // Available dates: June 16–20, 23–27, 30
-  const availableDates = [
-    new Date(2025, 5, 16),
-    new Date(2025, 5, 17),
-    new Date(2025, 5, 18),
-    new Date(2025, 5, 19),
-    new Date(2025, 5, 20),
-    new Date(2025, 5, 23),
-    new Date(2025, 5, 24),
-    new Date(2025, 5, 25),
-    new Date(2025, 5, 26),
-    new Date(2025, 5, 27),
-    new Date(2025, 5, 30),
-  ];
-
-  const isAvailable = (day) =>
-    availableDates.some(
-      (d) =>
-        d.getFullYear() === day.getFullYear() &&
-        d.getMonth() === day.getMonth() &&
-        d.getDate() === day.getDate()
-    );
+  const [date, setDate] = useState(new Date().toLocaleDateString());
 
   return (
     <section className="max-w-6xl mx-auto my-20 ">
@@ -74,7 +51,7 @@ export default function MeetingBooking() {
               mode="single"
               selected={date}
               onSelect={setDate}
-              defaultMonth={new Date(2025, 5)}
+              defaultMonth={date}
               className="w-full h-full [&_.rdp-table]:w-full [&_.rdp-table]:table-fixed"
             />
           </div>

@@ -1,9 +1,15 @@
-import { Calendar1, ChevronDown, MapPin, Search, User } from "lucide-react";
+import { useState } from "react";
+import { Calendar1, ChevronDown, MapPin, User } from "lucide-react";
 
 const FlightSearchBar = () => {
+  const [from, setFrom] = useState("BarcelonaBeach V");
+  const [to, setTo] = useState("BarcelonaBeach ~");
+  const [departure, setDeparture] = useState("22May2025");
+  const [returnDate, setReturnDate] = useState("22May2025");
+  const [guest, setGuest] = useState("1 adults, 0 children, 0 youth");
+
   return (
     <div className="py-2 px-5 border-[1px] rounded-lg mt-2">
-      {/* Search Form */}
       <div className="grid grid-cols-1 md:grid-cols-10 gap-4 items-center">
         {/* From Input */}
         <div className="md:col-span-2 border-b-2 md:border-b-0 md:border-r-2">
@@ -15,8 +21,8 @@ const FlightSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 text-sm focus:outline-0"
-              value="BarcelonaBeach V"
-              readOnly
+              value={from}
+              onChange={(e) => setFrom(e.target.value)}
             />
             <ChevronDown />
           </div>
@@ -32,8 +38,8 @@ const FlightSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 text-sm focus:outline-0"
-              value="BarcelonaBeach ~"
-              readOnly
+              value={to}
+              onChange={(e) => setTo(e.target.value)}
             />
             <ChevronDown />
           </div>
@@ -48,9 +54,9 @@ const FlightSearchBar = () => {
             <Calendar1 size={16} />
             <input
               type="text"
-              className="w-full p-2 text-sm focus:outline-0 "
-              value="22May2025"
-              readOnly
+              className="w-full p-2 text-sm focus:outline-0"
+              value={departure}
+              onChange={(e) => setDeparture(e.target.value)}
             />
             <ChevronDown />
           </div>
@@ -66,8 +72,8 @@ const FlightSearchBar = () => {
             <input
               type="text"
               className="w-full p-2 text-sm focus:outline-0"
-              value="22May2025"
-              readOnly
+              value={returnDate}
+              onChange={(e) => setReturnDate(e.target.value)}
             />
             <ChevronDown />
           </div>
@@ -82,9 +88,9 @@ const FlightSearchBar = () => {
             <User size={16} />
             <input
               type="text"
-              className="w-full p-2 focus:outline-0 text-sm"
-              value="1 adults, 0 children, 0 youth"
-              readOnly
+              className="w-full p-2 text-sm focus:outline-0"
+              value={guest}
+              onChange={(e) => setGuest(e.target.value)}
             />
             <ChevronDown />
           </div>

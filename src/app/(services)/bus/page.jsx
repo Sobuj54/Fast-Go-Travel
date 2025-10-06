@@ -2,6 +2,31 @@ import ServiceBanner from "../components/ServiceBanner";
 import BusLeftSideBar from "./components/BusLeftSideBar";
 import RightBusSearchResults from "./components/RightBusSearchResults";
 
+// app/bus-search/page.tsx (if using App Router)
+
+export const metadata = {
+  title: "Fast Go Travel | Search Buses",
+  description:
+    "Find and book bus tickets with Fast Go Travel. Compare bus operators, routes, and prices. Enjoy affordable and reliable bus travel with instant booking.",
+  keywords: [
+    "bus search",
+    "book bus tickets",
+    "cheap bus tickets",
+    "long distance buses",
+    "intercity bus travel",
+    "Fast Go Travel",
+    "bus booking",
+  ],
+  metadataBase: new URL("https://fast-go-travel.vercel.app/"),
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  category: "travel",
+};
+
 const Bus = () => {
   return (
     <div className="max-w-[1440px] mx-auto">
