@@ -1,6 +1,28 @@
 import PackageCardDetails from "../../components/PackageCardDetails";
 import umrahPackages from "../../data/packages.json";
 
+// ✅ Metadata for SEO
+export async function generateMetadata({ params }) {
+  const { id } = params;
+  const pkg = umrahPackages.find((p) => p.id === Number(id));
+
+  if (!pkg) {
+    return {
+      title: "Package Not Found | Umrah Packages",
+      description:
+        "Sorry, the Umrah package you are looking for does not exist.",
+      robots: "noindex",
+    };
+  }
+
+  return {
+    title: `${pkg.title} | Umrah Package Details`,
+    description:
+      pkg.description?.slice(0, 160) ||
+      "View details of this Umrah package, including itinerary, pricing, and facilities.",
+  };
+}
+
 // Server component; must be async to safely access params
 export default async function DetailsPage({ params }) {
   // Access id safely

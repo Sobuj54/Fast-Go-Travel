@@ -1,4 +1,3 @@
-"use client";
 import { FaLocationArrow } from "react-icons/fa";
 import { BsPersonVcardFill } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
@@ -6,24 +5,38 @@ import { IoCalendarNumber } from "react-icons/io5";
 import { MdPeopleAlt } from "react-icons/md";
 import { GiStopwatch } from "react-icons/gi";
 import umrahPackages from "../../data/packages.json";
-import { use, useState } from "react";
+import { use } from "react";
 import { Button } from "@headlessui/react";
 import Link from "next/link";
+
+// Dynamic metadata generation
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params; // <-- await here
+  const id = Number(resolvedParams.id);
+
+  const pkg = umrahPackages.find((p) => p.id === id);
+
+  if (!pkg) {
+    return {
+      title: "Package Not Found | Firsttrip",
+      description: "The requested Umrah package does not exist.",
+    };
+  }
+
+  return {
+    title: `${pkg.location} - ${pkg.nights} Nights ${pkg.days} Days | Firsttrip`,
+    description: `Book your Umrah package to ${pkg.location} for ${
+      pkg.nights
+    } nights and ${
+      pkg.days
+    } days. Starting from BDT ${pkg.price.toLocaleString()} per person.`,
+  };
+}
 
 export default function BookingPage({ params }) {
   const resolvedParams = use(params); // unwrap the Promise
   const id = Number(resolvedParams.id);
   const pkg = umrahPackages.find((p) => p.id === id);
-
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    travellers: 1,
-    customize: false,
-    accept: false,
-  });
 
   if (!pkg) {
     return (
@@ -34,7 +47,7 @@ export default function BookingPage({ params }) {
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen pb-20">
+    <div className="bg-gray-50 pb-20">
       {/* Progress Steps */}
       <div className="w-full border-b bg-white shadow-sm">
         <div className="max-w-5xl mx-auto md:px-6 py-3 flex items-center justify-between relative">
@@ -69,10 +82,10 @@ export default function BookingPage({ params }) {
         </div>
       </div>
 
-      <div className="lg:grid lg:grid-cols-12 lg:gap-4 max-w-8xl mx-auto md:px-6">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-4 max-w-[1440px] mx-auto ">
         <div className="lg:col-span-9 mx-auto ">
           {/* Content */}
-          <div className="max-w-5xl mx-auto mt-10 px-10">
+          <div className="max-w-full mx-auto mt-10">
             <div className="bg-white border rounded-xl shadow-sm p-6">
               <p className="font-bold pb-2">Umrah Package 5 Nights 6 Days</p>
               {/* Package + Price Row */}
