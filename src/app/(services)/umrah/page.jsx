@@ -3,6 +3,26 @@ import PackageLeftSidebar from "./components/PackageLeftSidebar";
 import packageData from "./data/packages.json";
 import { FaKaaba } from "react-icons/fa6";
 
+export const metadata = {
+  title: "Fast Go Travel | Umrah Packages - Affordable Umrah Travel Deals",
+  description:
+    "Discover the best Umrah packages for 2025 with Fast Go Travel. Affordable, reliable, and convenient Umrah travel deals including flights, hotels, and guided services.",
+  keywords: [
+    "Umrah packages",
+    "cheap Umrah packages",
+    "Umrah deals 2025",
+    "Umrah travel",
+    "Umrah flights and hotels",
+    "Hajj and Umrah services",
+    "Umrah booking online",
+  ],
+  robots: {
+    index: true, // this page should definitely be indexed
+    follow: true,
+  },
+  category: "travel",
+};
+
 const Umrah = () => {
   return (
     <div className="max-w-[1440px] mx-auto">
