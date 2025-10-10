@@ -46,7 +46,7 @@ export default function PasswordResetPage() {
           {/* Icon */}
           <div className="mb-8">
             <div className="w-20  py-3 px-3 bg-[#066CCB] rounded-xl flex items-center justify-center ">
-             <img className="text-white" src="/icons/user.png" alt="" />
+              <img className="text-white" src="/icons/user.png" alt="" />
             </div>
           </div>
 
@@ -64,20 +64,18 @@ export default function PasswordResetPage() {
           <div className="space-y-4 mb-8">
             {/* Email Option */}
             <div
-              className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
-                selectedMethod === "email"
-                  ? "border-blue-600 bg-blue-50"
-                  : ""
-              }`}
+              className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${selectedMethod === "email"
+                ? "border-blue-600 bg-blue-50"
+                : ""
+                }`}
               onClick={() => setSelectedMethod("email")}
             >
               <div className="flex items-center space-x-3">
                 <div
-                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                    selectedMethod === "email"
-                      ? "border-blue-600"
-                      : "border-gray-300"
-                  }`}
+                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${selectedMethod === "email"
+                    ? "border-blue-600"
+                    : "border-gray-300"
+                    }`}
                 >
                   {selectedMethod === "email" && (
                     <div className="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
@@ -109,20 +107,18 @@ export default function PasswordResetPage() {
 
             {/* SMS Option */}
             <div
-              className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
-                selectedMethod === "sms"
-                  ? "border-blue-600 bg-blue-50"
-                  : "border-gray-200 hover:border-gray-300"
-              }`}
+              className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${selectedMethod === "sms"
+                ? "border-blue-600 bg-blue-50"
+                : "border-gray-200 hover:border-gray-300"
+                }`}
               onClick={() => setSelectedMethod("sms")}
             >
               <div className="flex items-center space-x-3">
                 <div
-                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                    selectedMethod === "sms"
-                      ? "border-blue-600"
-                      : "border-gray-300"
-                  }`}
+                  className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${selectedMethod === "sms"
+                    ? "border-blue-600"
+                    : "border-gray-300"
+                    }`}
                 >
                   {selectedMethod === "sms" && (
                     <div className="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
@@ -157,16 +153,16 @@ export default function PasswordResetPage() {
           </div>
 
           {/* Continue Button */}
-         <a href="/authentication/code">
-         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors mb-6">
-            Continue
-          </button>
-         </a>
+          <a href="/forget-pass/step-02">
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors mb-6">
+              Continue
+            </button>
+          </a>
 
           {/* Sign In Link */}
           <div className="text-center">
             <a
-              href="/authentication/signup"
+              href="/signup"
               className="text-[#066CCB] hover:text-blue-700 font-medium"
             >
               Sign In to a different account

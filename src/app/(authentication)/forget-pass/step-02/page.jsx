@@ -113,18 +113,18 @@ export default function PasswordResetPage() {
 
           {/* Back button */}
           <div className="flex gap-26">
-          <a href="/authentication/verify">
-          <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
-          <RiArrowGoBackFill />
-            Back
-          </button>
-          </a>
-          <a href="/authentication/newpass">
-          <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
-          <RiArrowGoForwardLine />
-            Go
-          </button>
-          </a>
+            <a href="/forget-pass/verify">
+              <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
+                <RiArrowGoBackFill />
+                Back
+              </button>
+            </a>
+            <a href="/forget-pass/newpass">
+              <button className="flex items-center justify-center gap-2 text-[#6E6E71] hover:text-gray-800 transition-colors">
+                <RiArrowGoForwardLine />
+                Go
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const Page = () => {
     e.preventDefault();
     if (isValid) {
       // ✅ Move to next component/page
-      router.push("/authentication/verify"); // make sure you have this route
+      router.push("/forget-pass/verify"); // make sure you have this route
     }
   };
 
@@ -91,11 +91,10 @@ const Page = () => {
               <button
                 type="submit"
                 disabled={!isValid}
-                className={`cursor-pointer w-full py-3 px-4 rounded-lg font-medium transition-colors ${
-                  isValid
-                    ? "bg-[#066CCB] text-white hover:bg-[#055AA8]"
-                    : "bg-[#F5F5F7] text-[#9C9CA4] cursor-not-allowed"
-                }`}
+                className={`cursor-pointer w-full py-3 px-4 rounded-lg font-medium transition-colors ${isValid
+                  ? "bg-[#066CCB] text-white hover:bg-[#055AA8]"
+                  : "bg-[#F5F5F7] text-[#9C9CA4] cursor-not-allowed"
+                  }`}
               >
                 Next
               </button>

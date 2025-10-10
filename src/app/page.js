@@ -6,7 +6,6 @@ import PopularDestination from "./components/PopularDestination";
 import Testimonial from "./components/Testimonial";
 import WhoAreWe from "./components/WhoAreWe";
 import WhyTravel from "./components/WhyTravel";
-import PopUpHook from "./components/PopUpHook";
 
 export default function Home() {
 
@@ -20,7 +19,6 @@ export default function Home() {
       <FAQSection />
       <WhyTravel />
       <CtaSection />
-      <PopUpHook />
     </>
   );
 }

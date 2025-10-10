@@ -25,7 +25,7 @@ const Page = () => {
     console.log("Password updated successfully");
 
     // Redirect to sign in page after success
-    router.push("/authentication/signIn");
+    router.push("/signIn");
   };
 
   return (
@@ -146,9 +146,8 @@ const Page = () => {
                   className="hidden"
                 />
                 <span
-                  className={`w-5 h-5 border-2 border-blue-500 rounded flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                    agreed ? "bg-blue-500" : ""
-                  }`}
+                  className={`w-5 h-5 border-2 border-blue-500 rounded flex items-center justify-center flex-shrink-0 mt-0.5 ${agreed ? "bg-blue-500" : ""
+                    }`}
                 >
                   {agreed && (
                     <span className="text-white text-xs font-bold">✓</span>

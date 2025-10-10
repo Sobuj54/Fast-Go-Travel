@@ -120,9 +120,8 @@ export default function Header() {
                     key={link.href}
                     href={link.isAvailable ? link.href : "#"}
                     onClick={() => link.isAvailable || showToast()}
-                    className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
-                      isActive ? "text-blue-500" : "text-black"
-                    }`}
+                    className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${isActive ? "text-blue-500" : "text-black"
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -148,9 +147,8 @@ export default function Header() {
                                   onClick={() =>
                                     link.isAvailable || showToast()
                                   }
-                                  className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${
-                                    isActive ? "text-blue-500" : "text-black"
-                                  }`}
+                                  className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 ${isActive ? "text-blue-500" : "text-black"
+                                    }`}
                                 >
                                   {link.name}
                                 </Link>
@@ -168,9 +166,8 @@ export default function Header() {
 
           {/* Mobile menu */}
           <div
-            className={`fixed top-0 left-0 h-screen w-screen bg-white z-40 p-10 transform transition-transform duration-500 ease-in-out ${
-              isOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+            className={`fixed top-0 left-0 h-screen w-screen bg-white z-40 p-10 transform transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
           >
             {/* Close button */}
             <div className="flex">
@@ -208,9 +205,8 @@ export default function Header() {
                       link.isAvailable || showToast();
                       setIsOpen(false);
                     }}
-                    className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 p-2 rounded-md shadow-gray-300 shadow-lg flex items-center justify-center ${
-                      isActive ? "text-blue-300" : "text-black"
-                    }`}
+                    className={`text-base font-semibold transition-all duration-200 hover:text-opacity-80 p-2 rounded-md shadow-gray-300 shadow-lg flex items-center justify-center ${isActive ? "text-blue-300" : "text-black"
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -232,7 +228,7 @@ export default function Header() {
               </Button>
 
               <Button variant="outline" className="ml-2">
-                <Link href="/authentication/signIn">Login</Link>
+                <Link href="/signIn">Login</Link>
               </Button>
             </div>
           </div>
@@ -300,7 +296,7 @@ export default function Header() {
             </Button>
 
             <Button variant="outline" className="ml-2">
-              <Link href="/authentication/signIn">Login</Link>
+              <Link href="/signIn">Login</Link>
             </Button>
           </div>
         </div>
