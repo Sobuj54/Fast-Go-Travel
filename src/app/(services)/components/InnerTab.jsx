@@ -1,3 +1,5 @@
+//unused component
+
 import { useState } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import showToast from "@/utils/showToast";
@@ -16,17 +18,15 @@ const InnerTab = ({ children, tabs }) => {
               <Tab
                 key={tab.id}
                 className={({ selected }) =>
-                  `relative flex items-center gap-2 px-3 py-1 transition-all text-sm md:text-base cursor-pointer ${
-                    selected ? "text-blue-600" : "text-black"
+                  `relative flex items-center gap-2 px-3 py-1 transition-all text-sm md:text-base cursor-pointer ${selected ? "text-blue-600" : "text-black"
                   }`
                 }
               >
                 <span
-                  className={`w-4 h-4 border-2 rounded-full text-sm ${
-                    selectedIndex === idx
-                      ? "border-blue-500 border-4 scale-110"
-                      : ""
-                  }`}
+                  className={`w-4 h-4 border-2 rounded-full text-sm ${selectedIndex === idx
+                    ? "border-blue-500 border-4 scale-110"
+                    : ""
+                    }`}
                 />
                 {tab.name}
               </Tab>

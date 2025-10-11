@@ -41,7 +41,7 @@ export default function TabSystem() {
   const innerTabs = [
     { id: 0, name: "One Way" },
     { id: 1, name: "Round Trip" },
-    { id: 2, name: "Multi City" },
+    { id: 2, name: "Multi-City" },
   ];
   const tourInnerTabs = [
     { id: 0, name: "Hotel + Flight" },
@@ -86,7 +86,7 @@ export default function TabSystem() {
                   alt={item.name}
                   width={40}
                   height={40}
-                  className="h-6 w-6 lg:h-8 lg:w-8"
+                  className={item.name === 'E-Sim' ? 'p-1' : ''}
                 />
                 <span className="whitespace-nowrap">{item.name}</span>
               </Tab>
@@ -95,9 +95,7 @@ export default function TabSystem() {
 
           <TabPanels className="mt-10">
             <TabPanel>
-              <InnerTab tabs={innerTabs}>
-                <FlightSearchBar />
-              </InnerTab>
+              <FlightSearchBar />
             </TabPanel>
             <TabPanel>
               <InnerTab tabs={innerTabs}>
