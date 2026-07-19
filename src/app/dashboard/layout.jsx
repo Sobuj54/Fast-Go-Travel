@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -166,19 +166,44 @@ const Layout = ({ children }) => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <img src="/images/item.png" alt="" />
+                  <Image
+                    src="/images/item.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/images/item1.png" alt="" />
+                  <Image
+                    src="/images/item1.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/images/item2.png" alt="" />
+                  <Image
+                    src="/images/item2.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/images/item.png" alt="" />
+                  <Image
+                    src="/images/item.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="/images/item1.png" alt="" />
+                  <Image
+                    src="/images/item1.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
               </Swiper>
 
