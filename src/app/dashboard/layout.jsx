@@ -166,19 +166,44 @@ const Layout = ({ children }) => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <Image src="/images/item.png" width={300} height={300} alt="" />
+                  <Image
+                    src="/images/item.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image src="/images/item1.png" width={300} height={300} alt="" />
+                  <Image
+                    src="/images/item1.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image src="/images/item2.png" width={300} height={300} alt="" />
+                  <Image
+                    src="/images/item2.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image src="/images/item.png" width={300} height={300} alt="" />
+                  <Image
+                    src="/images/item.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image src="/images/item1.png" width={300} height={300} alt="" />
+                  <Image
+                    src="/images/item1.png"
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
                 </SwiperSlide>
               </Swiper>
 
