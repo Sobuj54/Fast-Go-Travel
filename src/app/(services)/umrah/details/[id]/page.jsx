@@ -3,7 +3,7 @@ import umrahPackages from "../../data/packages.json";
 
 // ✅ Metadata for SEO
 export async function generateMetadata({ params }) {
-  const { id } = params;
+  const { id } = await params;
   const pkg = umrahPackages.find((p) => p.id === Number(id));
 
   if (!pkg) {
